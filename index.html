@@ -579,13 +579,64 @@ fill: #1751DE;
 				<div class="elementor-element elementor-element-db3dab8 elementor-align-center elementor-widget elementor-widget-button" data-id="db3dab8" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-						<a id="call-button" class="elementor-button elementor-button-link elementor-size-sm" href="tel:+1234567890">
-							<span class="elementor-button-content-wrapper">
-								<span class="elementor-button-text">
-									Call : 123-456-7890 | TTY 711
-								</span>
-							</span>
-						</a>
+						<style>
+  #call-button {
+    display: inline-block;
+    background-color: #007f00;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    max-width: 100%;
+  }
+
+  #call-button .elementor-button-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #call-button .elementor-button-text {
+    font-size: 36px;
+  }
+
+  #call-button span:nth-child(2) {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  /* 🔧 Mobile Responsive */
+  @media (max-width: 480px) {
+    #call-button {
+      padding: 16px 20px;
+      border-radius: 15px;
+    }
+
+    #call-button .elementor-button-text {
+      font-size: 22px;
+    }
+
+    #call-button span:nth-child(2) {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 6px;
+    }
+  }
+</style>
+
+<a id="call-button" class="elementor-button elementor-button-link elementor-size-sm" href="tel:+1234567890">
+  <span class="elementor-button-content-wrapper">
+    <span class="elementor-button-text">
+      Call : 123-456-7890 | TTY 711
+    </span>
+    <span>
+      Available Monday – Friday 9:00 am – 6:00 pm EST.
+    </span>
+  </span>
+</a>
 						
 						<script>
 							function getQueryParam(param) {
